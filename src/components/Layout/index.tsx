@@ -1,7 +1,7 @@
 
 import { Box, Card, colors, Grid, IconButton, useTheme} from "@mui/material"
 import { useContext } from 'react'
-import { ColoModeContext } from '../../theme/theme1'
+import { ColoModeContext } from '../../theme/theme'
 
 export const Layout: React.FC = () => {
 

@@ -1,10 +1,7 @@
 import React, { useContext } from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles'
-import { ColoModeContext } from './theme1';
+import { ColoModeContext } from './theme';
 
-import { darkTheme } from './darkTheme';
-import { lightTheme } from './lightTheme';
-import { Box, Icon, IconButton } from '@mui/material';
+import { Box } from '@mui/material';
 
 const Btn: React.FC = () => {
   const {  toggleColorMode } = useContext(ColoModeContext);
