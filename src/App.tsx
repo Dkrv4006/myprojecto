@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import { ColoModeContext } from './theme';
+import { ColoModeContext } from './theme/theme1';
 
-import { darkTheme } from './darkTheme';
-import { lightTheme } from './lightTheme';
+import { darkTheme } from './theme/darkTheme';
+import { lightTheme } from './theme/lightTheme';
 import { Box, Icon, IconButton } from '@mui/material';
-import Btn from './test';
+import Btn from './theme/test';
+import { Layout } from './components/Layout';
 
 const App: React.FC = () => {
   const { mode, toggleColorMode } = useContext(ColoModeContext);
@@ -14,14 +15,17 @@ const App: React.FC = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{bgcolor: theme.palette.primary.main}} >
+      <Layout/>
+       
       
-      <IconButton sx={{ ml: 1 }} onClick={toggleColorMode} color="inherit">
+      {/* <IconButton sx={{ ml: 1 }} onClick={toggleColorMode} color="inherit">
         {theme.palette.mode === 'dark' ? <Icon>star</Icon> : <Icon>add_circle</Icon>}
       </IconButton>
         <p>Conteúdo da aplicação</p>
-      </Box>
-      <Btn/>
+      
+      <Btn/> */}
+
+
     </ThemeProvider>
   );
 };

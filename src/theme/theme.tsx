@@ -1,9 +1,10 @@
 import { createContext, useMemo , useState } from 'react'
-import { createTheme } from '@mui/material/styles'
+import { createTheme, ThemeOptions } from '@mui/material/styles'
 import React from 'react'
+import { dark } from '@mui/material/styles/createPalette'
 
 
-export const colos = (mode) => ({
+export const colos = (mode: 'light' | 'dark') => ({
     ...(mode === 'dark'
     ? {
         black: {
@@ -92,19 +93,20 @@ export const colos = (mode) => ({
     }),
 })
 
-export const themeDefault = (mode) => {
+export const themeDefault = (mode: 'light' | 'dark') => {
     const colors = colos(mode)
 
     return {
       patltte: {
         mode:mode,
-        ...(mode === 'dakc'
+        ...(mode === 'dark'
         ? {
           primary:{
-            main: colors.black[500],
+            main: colors.blue[500],
           },
           secondary:{
             main: colors.blue[500]
+            
           },
           neutral:{
             dark: colors.lightblue[700],
@@ -113,7 +115,7 @@ export const themeDefault = (mode) => {
           }
         } : {
           primary:{
-            main: colors.whele[100],
+            main: colors.lightblue[100],
           },
           secondary:{
             main: colors.blue[500]
@@ -127,7 +129,7 @@ export const themeDefault = (mode) => {
         
         )
       },
-    }
+    } as ThemeOptions
 }
 
 export const ColoModeContext = createContext({toggleColorMode: () => {}})

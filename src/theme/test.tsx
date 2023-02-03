@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import { ColoModeContext } from './theme';
+import { ColoModeContext } from './theme1';
 
 import { darkTheme } from './darkTheme';
 import { lightTheme } from './lightTheme';
@@ -13,10 +13,7 @@ const Btn: React.FC = () => {
 
       <Box sx={{bgcolor:'red'}} >
       
-      <IconButton sx={{ ml: 1 }} onClick={toggleColorMode} color="inherit">
-        'daniel'
-      </IconButton>
-        <p>Conteúdo da aplicação</p>
+      
       </Box>
 
   );
