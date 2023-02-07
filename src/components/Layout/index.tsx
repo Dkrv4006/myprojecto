@@ -3,7 +3,7 @@ import { Box, Card, colors, Grid, IconButton, useTheme} from "@mui/material"
 import { useContext } from 'react'
 import { ColoModeContext } from '../../theme/theme'
 import { Sidebar } from "../Sidebar"
-
+import Tab from '@mui/material/Tab';
 export const Layout: React.FC = () => {
 
   const theme = useTheme()
@@ -17,7 +17,7 @@ export const Layout: React.FC = () => {
           
           <Box 
           height={"100vh"}
-          bgcolor={theme.palette.primary.contrast}
+          bgcolor={theme.palette.primary.main}
           >
             <Sidebar/>
           </Box>
